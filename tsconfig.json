@@ -2,8 +2,11 @@
   "compilerOptions": {
     "target": "ESNext",
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./src/*"]
+      "@styles/*": ["styles/*"],
+      "@types/": ["types/*"],
+      "@components/": ["components/*"]
     },
     "module": "ESNext",
     "skipLibCheck": true,

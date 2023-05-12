@@ -1,35 +1,26 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { Card } from "./components/card";
+import qrCode from "./assets/images/image-qr-code.png";
+const cardData = {
+  title: "Improve your front-end skills by building projects",
+  subtitle:
+    "Scan the QR code to visit Frontend Mentor and take your coding skills to the next level",
+  imageURL: qrCode,
+};
 
 function App() {
-  const [count, setCount] = useState(0)
-
+  const { title, subtitle, imageURL } = cardData;
   return (
     <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
+      <Card title={title} subtitle={subtitle} imageURL={imageURL} />
+      <div class='attribution'>
+        Challenge by{" "}
+        <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>
+          Frontend Mentor
         </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+        . Coded by <a href='#'>Tim DeHof</a>.
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
