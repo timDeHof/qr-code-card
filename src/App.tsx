@@ -4,15 +4,15 @@ const cardData = {
   title: "Improve your front-end skills by building projects",
   subtitle:
     "Scan the QR code to visit Frontend Mentor and take your coding skills to the next level",
-  imageURL: qrCode,
+  imageUrl: qrCode,
 };
 
 function App() {
-  const { title, subtitle, imageURL } = cardData;
+  const { title, subtitle, imageUrl } = cardData;
   return (
     <>
-      <Card title={title} subtitle={subtitle} imageURL={imageURL} />
-      <div class='attribution'>
+      <Card title={title} subtitle={subtitle} imgUrl={imageUrl} />
+      <div className='attribution'>
         Challenge by{" "}
         <a href='https://www.frontendmentor.io?ref=challenge' target='_blank'>
           Frontend Mentor

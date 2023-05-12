@@ -4,9 +4,9 @@
     "lib": ["DOM", "DOM.Iterable", "ESNext"],
     "baseUrl": ".",
     "paths": {
-      "@styles/*": ["styles/*"],
-      "@types/": ["types/*"],
-      "@components/": ["components/*"]
+      "@styles/*": ["./src/styles/*"],
+      "@types/": ["./src/types/*"],
+      "@components/": ["./src/components/*"]
     },
     "module": "ESNext",
     "skipLibCheck": true,

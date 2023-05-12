@@ -1,13 +1,12 @@
-import React from "react";
 import { Wrapper, CodeContainer, Context, Title, Subtitle } from "./cardStyles";
-import { CardType } from "@types/cartType";
+import CardType from "../types/cardType";
 
-export const Card = ({ title, subtitle, imageURL }: CardType) => {
+export const Card = ({ title, subtitle, imgUrl }: CardType) => {
   return (
     <div>
       <Wrapper>
         <CodeContainer href='#'>
-          <img src={imageURL} alt='qrCode image' />
+          <img src={imgUrl} alt='qrCode image' />
         </CodeContainer>
         <Context>
           <Title>{title}</Title>
