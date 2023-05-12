@@ -16,37 +16,18 @@ realistic projects.
   - [Continued development](#continued-development)
   - [Useful resources](#useful-resources)
 - [Author](#author)
-- [Acknowledgments](#acknowledgments)
-
-**Note: Delete this note and update the table of contents based on what sections
-you keep.**
 
 ## Overview
 
 ### Screenshot
 
-![Screenshot](./src/assets/images/QRCode-screenshot.png)
-
-Add a screenshot of your solution. The easiest way to do this is to use Firefox
-to view your project, right-click the page and select "Take a Screenshot". You
-can choose either a full-height screenshot or a cropped one based on how long
-the page is. If it's very long, it might be best to crop it.
-
-Alternatively, you can use a tool like [FireShot](https://getfireshot.com/) to
-take the screenshot. FireShot has a free option, so you don't need to purchase
-it.
-
-Then crop/optimize/edit your image however you like, add it to your project, and
-update the file path in the image above.
-
-**Note: Delete this note and the paragraphs above when you add your screenshot.
-If you prefer not to add a screenshot, feel free to remove this entire
-section.**
+![Screenshot](./src/assets/images/qr-code-card_screenshot.png)
 
 ### Links
 
 - Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL:
+  [https://timdehof.github.io/qr-code-card/e](https://timdehof.github.io/qr-code-card/)
 
 ## My process
 
@@ -58,50 +39,48 @@ section.**
 - CSS Grid
 - Mobile-first workflow
 - [React](https://reactjs.org/) - JS library
-- [Next.js](https://nextjs.org/) - React framework
+- [Vite](https://vitejs.dev/) - React development tool
 - [Styled Components](https://styled-components.com/) - For styles
-
-**Note: These are just examples. Delete this note and replace the list above
-with your own choices**
 
 ### What I learned
 
-Use this section to recap over some of your major learnings while working
-through this project. Writing these out and providing code samples of areas you
-want to highlight is a great way to reinforce your own knowledge.
+I used this challenge to practice working with Typescript and vite. I found it
+very challenging to using vite for images. But I decided to just import images
+as an url asset.
 
-To see how you can add code snippets, see below:
-
-```html
-<h1>Some HTML code I'm proud of</h1>
+```typescript
+import qrCode from "./assets/images/image-qr-code.png";
 ```
 
-```css
-.proud-of-this-css {
-  color: papayawhip;
-}
+Also, I practiced using styled-components package for the css styles. I like
+this css-to-js package because you write in javascript or typescript for the css
+and don't have worry about writing some creative class name for tags you want to
+style. Also, I like the ability to change the styling of the tag based on props
+if you want to.
+
+```typescript
+<CodeContainer href='#'>
+  <img src={imgUrl} alt='qrCode image' />
+</CodeContainer>
 ```
 
-```js
-const proudOfThisFunc = () => {
-  console.log("🎉");
-};
+```typescript
+export const CodeContainer = styled.a`
+  margin-bottom: 24px;
+  aspect-ratio: 1:1;
+  & img {
+    display: inline-block;
+    width: 100%;
+    border-radius: 10px;
+  }
+`;
 ```
-
-If you want more help with writing markdown, we'd recommend checking out
-[The Markdown Guide](https://www.markdownguide.org/) to learn more.
-
-**Note: Delete this note and the content within this section and replace with
-your own learnings.**
 
 ### Continued development
 
-Use this section to outline areas that you want to continue focusing on in
-future projects. These could be concepts you're still not completely comfortable
-with or techniques you found useful that you want to refine and perfect.
-
-**Note: Delete this note and the content within this section and replace with
-your own plans for continued development.**
+I would like to continue practicing using typescript and vite for small
+challenges. I would also like to try using other libraries and frameworks like
+Next.js, Angular, and svelte.
 
 ### Useful resources
 
@@ -117,20 +96,10 @@ solution or for yourself when you look back on this project in the future.**
 
 ## Author
 
-- Website - [Add your name here](https://www.your-site.com)
+- Website - [Tim DeHof](https://www.timdehof.dev/)
 - Frontend Mentor -
   [@yourusername](https://www.frontendmentor.io/profile/yourusername)
 - Twitter - [@yourusername](https://www.twitter.com/yourusername)
 
 **Note: Delete this note and add/remove/edit lines above based on what links
 you'd like to share.**
-
-## Acknowledgments
-
-This is where you can give a hat tip to anyone who helped you out on this
-project. Perhaps you worked in a team or got some inspiration from someone
-else's solution. This is the perfect place to give them some credit.
-
-**Note: Delete this note and edit this section's content as necessary. If you
-completed this challenge by yourself, feel free to delete this section
-entirely.**
